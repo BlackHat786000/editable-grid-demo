@@ -35,7 +35,7 @@ export class AppComponent {
   onEdit() {
     if (!this.edit) {
       this.edit = true;
-      this.editButtonName = 'UPDATE';
+      this.editButtonName = 'SAVE';
     } else {
       this.edit = false;
       this.editButtonName = 'EDIT';

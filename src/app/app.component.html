@@ -1,11 +1,13 @@
-<div>
-  <button (click)="onAdd()">ADD</button>
-</div>
-<div>
-  <button (click)="onEdit()" [disabled]="selection.selected.length === 0">{{editButtonName}}</button>
-</div>
-<div>
-  <button (click)="onDelete()" [disabled]="selection.selected.length === 0">DELETE</button>
+<div style="float: right">
+  <span style="padding-left: 25px">
+    <button mat-raised-button style="background-color: green" (click)="onAdd()">ADD</button>
+  </span>
+  <span style="padding-left: 25px">
+    <button mat-raised-button color="primary" (click)="onEdit()" [disabled]="selection.selected.length === 0">{{editButtonName}}</button>
+  </span>
+  <span style="padding-left: 25px; padding-right: 25px">
+    <button mat-raised-button color="warn" (click)="onDelete()" [disabled]="selection.selected.length === 0">DELETE</button>
+  </span>
 </div>
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" class="full-width-table" aria-label="Elements">
